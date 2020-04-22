@@ -1,0 +1,25 @@
+>>访问修饰符    修饰符    返回值类型    方法名(参数列表) => 表达式;
+
+这里需要注意的是，如果在方法定义中定义了返回值类型，在表达式中不必使用 return 关键字，只需要计算值即可。
+这种形式只能用在方法中只有一条语句的情况下，方便方法的书写。
+
+根据题目要求，在该实例中直接使用 => 形式的方法体，为了方便调用将该方法定义成 静态的，代码如下。
+class LambdaClass
+{
+    public static int Add(int a, int b) => a + b;
+}
+在 Main 方法中调用，代码如下。
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine(LambdaClass.Add(100, 200));
+    }
+}
+
+从该实例可以看出，在 Add 方法中只需要写一句话即可完成方法的需求。如果将 Add 方法中的返回值更改成 void,则 Add 方法的定义语句如下。
+public static void Add(int a, int b) => Console.WriteLine(a + b);
+
+这样在调用 Add 方法时直接调用即可，不需要再使用 Console.WriteLine 语句输出结果。
+
+关键点：=>形式的方法适用于一条语句的情况，不用写return;
