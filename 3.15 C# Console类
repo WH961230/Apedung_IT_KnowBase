@@ -1,0 +1,2 @@
+>>
+关键点：Console.Write(格式化字符串, 输出项, 输出项2); 格式化字符串{索引号0开始}，Console.WriteLine("{0}同学在{1}学习", name, school);
