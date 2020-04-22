@@ -1,0 +1,53 @@
+>>类的访问修饰符:
+用于设定对类的访问限制，包括 public、internal 或者不写，用 internal 或者不写时代表只能在当前项目中访问类；
+public 则代表可以在任何项目中访问类。
+
+>>internal 类似于java中的private
+
+>>修饰符：修饰符是对类本身特点的描述，包括 abstract、sealed 和 static。abstract 是抽象的意思，使用它修饰符的类不能被实例化；
+sealed 修饰的类是密封类，不能 被继承；static 修饰的类是静态类，不能被实例化。
+
+abstract 抽象类
+sealed 密封类
+static 静态类
+
+>>类名：类名用于描述类的功能，因此在定义类名时最好是具有实际意义，这样方便用户理解类中描述的内容。在同一个命名空间下类名必须是唯一的。
+
+>>类的成员：在类中能定义的元素，主要包括字段、属性、方法。
+
+>>最好是每一个文件定义一个类
+
+我们先来写一个类Person，字段为：name、age、sex，属性：Name、Age、Sex。那么，成员变量：name、age、sex、Name、Age、Sex。字段和属性，都可以叫做是成员变量。属性和字段都是用来存储数据的，但肯定是有不同的（要不然也不会起两个名字，干脆叫一个名算了~）。
+    public class Person
+    {
+        // 字段
+        private string name;
+        private int age;
+        private string sex;
+        // 属性
+        public string Name
+        {
+            get { return name; }
+            set { sex = value; }
+        }
+        public int Age
+        {
+            get { return age; }
+            set { age = value; }
+        }
+        public string Sex
+        {
+            get { return sex; }
+            set { sex = value; }
+        }
+    }
+字段一般用在类的内部使用，属性一般供外部类访问。按照类的设计原则，字段都是private的，只能在类的内部使用，如果是public的，
+那么外部类谁都有可能访问，对字段进行破坏性的修改，这是我们不希望看到的，所以字段一定是private的。
+属性想当于是给字段加了一个保护套，如果想读这个字段的值，属性里面走的一定是get{}，如果想给字段赋值，属性里一定走的是set{}，
+那么程序员可以在get{}和set{}中增加一些限制，验证要赋值的内容，或者让某个字段只能读不能赋值（对应该字段的的属性只让它有get{}，
+不写set{}）。对于外部使用者来说只能够使用它，不能控制它，如何控制操作是由类自身决定的（或者说是由程序员决定的，嘿嘿~）。
+
+另外，字段值可以用作ref、out参数，而属性不能。
+
+
+关键点：internal 是类的默认修饰属性类似于private 最好是每一个文件定义一个类 类是由属性字段和方法组成这个和java不太一样，属性是字段的保护层
