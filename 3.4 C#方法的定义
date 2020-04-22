@@ -1,0 +1,12 @@
+访问修饰符    修饰符    返回值类型    方法名(参数列表)
+{
+    语句块;
+}
+
+>>
+
+2) 修饰符
+在定义方法时修饰符包括 virtual（虚拟的）、abstract（抽象的）
+、override（重写的）、static（静态的）、sealed（密封的）。override 是在类之间继承时使用的。
+
+关键点：方法的修饰符 virtual abstract override static sealed。
