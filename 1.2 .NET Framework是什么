@@ -1,0 +1,23 @@
+>> .NET Framework 定义组成如下:
+    -> (描述：windows组件之一；功能：快速开发 网站服务 应用程序平台) 包括 CLR 虚拟执行系统 和.NET Framework类库
+>> .NET Framework 特点如下：
+    -> 提供标准的面向对象开发环境。用户不仅可以在本地与对象交互，视频讲解还可以通过 Web Service 和 .NET Remoting 技术进行远程交互。
+    -> 提供优化的代码执行环境，具有良好的版本兼容性，并允许在同一台计算机上安装不同版本的 .NET Framework。
+    -> 使用 JIT（Just In Time 准时制生产方式）技术，提高代码的运行速度
+>> .NET Framework体系结构图
+    1F C#等语言（ C#、VB、C++、J# 等）
+    2F CLS （Common Language Specification, 公共语言运行规范）定义不同的语言如何创建.NET Framework支持的程序
+    3F FCL （Framework Class Libary） .NET Framework类库 在 FCL 中包括 Windows Forms （Windows 窗体程序）、ASP.NET（网站程序）、
+       WPF（Windows 的界面程序的框架）、 WCF（Windows 平台上的工作流程序）等程序所用到的类库文件。
+    4F CLR （Common Language Runtime） 用户可以将 CLR 看作一个在执行时管理代码的代码，它提供内存管理、线程管理和远程处理等核心服务，
+       并且还强制实施严格类型安全以及可提高安全性和可靠性的管理。(类似java虚拟机)它与 Java 虚拟机类似。
+       以公共语言运行库为目标的代码称为托管代码，不以公共语言运行库为目标的代码称为非托管代码。
+    5F OS （Operating System 操作系统）
+    
+新词：
+JIT 准时生产体制：JIT(Just in time) -- “日本化模式”  https://baike.baidu.com/item/%E5%87%86%E6%97%B6%E5%88%B6/2389401?fromtitle=JIT&fromid=2039740&fr=aladdin
+CLS 公共语言运行规范
+FCL .NET Frame类库
+CLR 虚拟执行系统 类似于java虚拟机
+
+关键点：.NET Framework 是一种windows组件，体系分为 编程语言-CLS-FCL-CLR-OS 其中 CLR Common Language Runtime 虚拟执行系统 类似于java虚拟机
