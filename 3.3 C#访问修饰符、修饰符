@@ -1,0 +1,37 @@
+>>类的访问修饰符为 public internal 不填 不填为internal
+
+>>成员修饰符
+
+1）public 公共
+2）private 私有 只能被同一个类使用
+3）internal 成员只能被同一个项目的代码访问 同一个程序集内部访问，项目复杂之后会形成多个项目组成的程序集，这个可以在他们之间访问
+4）protected 成员只能由类或派生类中的代码访问。
+在修饰字段时通常用两个修饰符，即readonly （只读）和static （静态的）。
+使用 readonly 修饰字段意味着只能读取该字段的值而不能给字段赋值。
+使用 static 修饰的字段是静态字段，可以直接通过类名访问该字段。
+需要注意的是常量不能使用 static 修饰符修饰。
+
+例子：
+namespace code_1
+{
+    class Test
+    {
+        private int id;                         //定义私有的整型字段 id
+        public readonly string name;            //定义公有的只读字符串类型字段 name
+        internal static int age;                //定义内部的静态的整型字段 age
+        private const string major = "计算机";  //定义私有的字符串类型常量 major
+    }
+}
+
+字段在类中定义完成后，在类加载时，会自动为字段赋值，不同数据类型的字段默认值不同， 如下表所示。
+
+数据类型	默认值
+整数类型 	0
+浮点型	0
+字符串类型	空值
+字符型	a
+布尔型	False
+其他引用类型	空值
+
+关键点：字符型的默认值是 a，readonly只读不能写，static是静态可以直接通过类名访问，internal是只能同一个项目代码访问，
+需要注意的是常量不能使用 static 修饰符修饰。
