@@ -1,0 +1,7 @@
+在 C# 语言中使用正则表达式时要用到 Regex 类,该类在 System.Text.RegularExpressions 名称空间中。
+
+在 Regex 类中使用 IsMatch 方法判断所匹配的字符串是否满足正则表达式的要求。
+
+
+Regex regex = new Regex(@"^(\w)+(\.\w)*@(\w)+((\.\w+)+)$");
+if (regex.IsMatch(email))
