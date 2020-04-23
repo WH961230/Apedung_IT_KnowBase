@@ -1,0 +1,17 @@
+C# Convert 方法是数据类型转换中最灵活的方法，它能够将任意数据类型的值转换成任意数据类型，前提是不要超出指定数据类型的范围。
+
+具体的语法形式如下。
+数据类型  变量名 = convert.To数据类型(变量名);
+
+这里 Convert.To 后面的数据类型要与等号左边的数据类型相匹配。
+
+Convert.ToInt16()	转换为整型(short)
+Convert.ToInt32()	转换为整型(int)
+Convert.ToInt64()	转换为整型(long)
+Convert.ToChar()	转换为字符型(char)
+Convert.ToString()	转换为字符串型(string)
+Convert.ToDateTime()	转换为日期型(datetime)
+Convert.ToDouble()	转换为双精度浮点型(double)
+Conert.ToSingle()	转换为单精度浮点型(float)
+
+对于整型和浮点型的强制数据类型操作也可以使用 Convert 方法代替，但是依然会损失存储范围大的数据类型的精度。
