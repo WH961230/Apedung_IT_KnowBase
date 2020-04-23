@@ -1,0 +1,53 @@
+>>就是虚拟的意思 未来子代实现，表示遗愿。
+
+public  virtual  数据类型  属性名{get; set; }
+
+//修饰方法
+访问修饰符  virtual  返回值类型方法名
+{
+    语句块；
+}
+
+
+需要注意的是，virtual 关键字不能修饰使用 static 修饰的成员。
+
+此外，virtual 关键字既可以添加到访问修饰符的后面，也可以添加到访问修饰符的前面，但实际应用中习惯将该关键字放到访问修饰符的后面。
+
+子类继承父类后能重写父类中的成员，重写的关键字是 override。
+
+方法隐藏和重写方法有区别吗？这是很多初学者常问的问题。观察以下代码，思考结果会是什么？
+纯文本复制
+class Program
+{
+    static void Main(string[] args)
+    {
+        A a1 = new B();//相当于创建了父类 子类方法被隐藏。
+        a1.Print();
+        A a2 = new C();
+        a2.Print();
+    }
+}
+class A
+{
+    public virtual void Print()
+    {
+        Console.WriteLine("A");
+    }
+}
+class B :A
+{
+    public new void Print()
+    {
+        Console.WriteLine("B");
+    }
+}
+class C :A
+{
+    public override void Print()
+    {
+        Console.WriteLine("C");
+    }
+}
+
+
+关键点：virtual 虚拟的意思 未来子代实现，表示遗愿。新概念方法隐藏和方法重写，public new 方法 写法第一次见。
