@@ -1,0 +1,26 @@
+
+
+
+class A
+{
+    public A(string name)
+    {
+        Console.WriteLine("A类的构造器，传入的值为：" + name);
+    }
+}
+class B :A
+{
+    public B()
+    {
+        Console.WriteLine("B类的构造器");
+    }
+    public B(string name):base(name)    //调用父类中带参数的构造器
+    {
+        Console.WriteLine("B类中带参数的构造器，传入的值为：" + name);
+    }
+}
+
+注意：如果在父类中没有无参构造器，必须在子类的构造器中继承父类的构造器，否则程序无法成功编译。
+
+
+关键点：子代自动继承父代的无参构造方法。然后父代如果没有无参的构造方法需要子代构造方法继承父代的有参构造方法。
