@@ -1,0 +1,4 @@
+>>
+string a = Console.ReadLine();
+Console.WriteLine("字符串长度为："+a.Length());
+Console.WriteLine("字符串中第一个字符为：" + a[0]);
