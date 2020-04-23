@@ -1,0 +1,54 @@
+C# Queue (队列) 是常见的数据结构之一，队列是一种先进先出的结构，即元素从队列尾部插入，从队列的头部移除，
+类似于日常生活中的站队，先到先得的效果。
+
+>> 类似于站队
+
+
+构造方法	作用
+Queue()	创建 Queue 的实例，集合的容量是默认初始容量 32 个元素，使用默认的增长因子
+Queue(ICollection col)	创建 Queue 的实例，该实例包含从指定实例中复制的元素，并且初始容量与复制的元素个数、增长因子相同
+Queue(int capacity) 	创建 Queue 的实例，并设置其指定的元素个数，默认增长因子
+Queue(int capacity, float growFactor)	创建 Queue 的实例，并设置其指定的元素个数和增长因子
+
+【实例 1】创建 Queue 类的实例，模拟排队购电影票的操作。
+
+根据题目要求，先向队列中加入 3 个元素，然后再依次购票。实现代码如下。
+class Program
+{
+    static void Main(string[] args)
+    {
+        Queue queue = new Queue();
+        //向队列中加入3为购票人
+        queue.Enqueue("小张");
+        queue.Enqueue("小李");
+        queue.Enqueue("小刘");
+        Console.WriteLine("购票开始：");
+        //当队列中没有人时购票结束
+        while (queue.Count != 0)
+        {
+            Console.WriteLine(queue.Dequeue() + "已购票！");
+        }
+        Console.WriteLine("购票结束！");
+    }
+}
+
+
+除了使用 ToArray() 方法以外，还可以使用 GetEnumerator() 方法来遍历，实现的代码如下。
+纯文本复制
+class Program
+{
+    static void Main(string[] args)
+    {
+        Queue queue = new Queue();
+        queue.Enqueue("aaa");
+        queue.Enqueue("bbb");
+        queue.Enqueue("ccc");
+        IEnumerator enumerator = queue.GetEnumerator();
+        while (enumerator.MoveNext())
+        {
+            Console.WriteLine(enumerator.Current);
+        }
+    }
+}
+
+关键点： 站队的集合 先进先出
