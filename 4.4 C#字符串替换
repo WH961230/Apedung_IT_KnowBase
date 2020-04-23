@@ -1,0 +1,3 @@
+>> str = str.Replace(",", "_");
+
+关键点: 替换函数 str.Replace(",", "_");
