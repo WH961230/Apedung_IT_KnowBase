@@ -1,0 +1,33 @@
+>> ArrayList 代表了可被单独索引的对象的有序集合。它基本上可以替代一个数组。
+
+但是，与数组不同的是，ArrayList 可以使用索引在指定的位置添加和移除项目，动态数组会自动重新调整它的大小。
+
+构造方法	作用
+ArrayList()	创建 ArrayList 的实例，集合的容量是默认初始容量
+ArrayList(ICollection c)	创建 ArrayList 的实例，该实例包含从指定实例中复制的元素，并且初始容量与复制的元素个数相同
+ArrayList(int capacity)	创建 ArrayList 的实例，并设置其初始容量
+
+下面分别使用 ArrayList 类的构造器创建 ArrayList 实例，代码如下。
+
+ArrayList listl=new ArrayList();
+ArrayList list2=new ArrayList(listl);
+ArrayList list3=new ArrayList(20);
+
+在创建 ArrayList 类的实例后，集合中还未存放值。
+
+在 C# 语言中提供了集合初始化器，允许在创建集合实例时向集合中添加元素，代码如下。
+ArrayList list4 = new ArrayList(){l,2,3,4};
+在{}中的值即集合中存入的值。
+
+集合与数组一样也能使用 foreach 语句遍历元素。
+
+由于在集合中存放的值允许是任意类型，能使用 var 关键字来定义任意类型的变量。
+
+遍历 list4 集合中的数据的代码如下。
+
+foreach(var v in list4)
+{
+    Console.WriteLine(v);
+}
+
+关键点：升级版数组 进化版来袭
