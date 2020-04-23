@@ -1,0 +1,56 @@
+在结构体中能定义字段、属性、方法等成员。定义的语法形式如下。
+访问修饰符  struct  结构体名称
+{
+    //结构体成员
+}
+
+
+2) 结构体名称
+命名规则通常和变量的命名规则相同，即从第二个单词开始每个单词的首字母大写。
+
+3) 结构体成员
+包括字段、属性、方法以及后面要介绍的事件等。
+
+结构体从字面上来理解是指定义一种结构，实际上结构体是一种与类的定义非常相似的数据类型，但它是值类型。
+
+结构体的定义位置与枚举类型一样，都是在类中定义或者在命名空间下定义，而不能将其定义到方法中。
+
+当然，在调用结构体时也可以不用构造器。
+
+
+                 结构体	                                           类
+          允许不使用new对其实例化 	                          必须使用new实例化
+             没有默认构造方法	                                 有默认构造方法
+               不能继承类 	                                       能继承类
+              没有析构方法	                                     有析构方法
+不允许使用abstract、protected以及sealed修饰	     允许使用abstract、protected以及sealed修饰
+
+
+
+using System;
+namespace ok
+{
+  class test
+  {
+    static void Main (string []args) 
+    {
+		Console.WriteLine("程序可以运行");
+		student stu;
+		stu.age = 1;
+		stu.name = "王辉";
+		Console.Write("Age : "+ stu.age);
+		Console.Write("Name : " + stu.name);
+
+    }
+	  
+	struct student
+	  {
+		public int age;
+		public string name ;
+	  }
+  }
+}//结构体不被new的使用
+
+
+
+关键点：结构体从字面上来理解是指定义一种结构，实际上结构体是一种与类的定义非常相似的数据类型，但它是值类型。
