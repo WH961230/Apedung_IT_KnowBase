@@ -1,0 +1,6 @@
+>>C# GetType 方法不含任何参数，是非静态方法。
+
+C# GetType 方法用于获取当前实例的类型，返回值为 System.Type 类型。
+
+
+关键点： GetType 是照妖镜
