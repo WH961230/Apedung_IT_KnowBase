@@ -1,0 +1,6 @@
+>>
+string str;
+str.IndexOf("a");//表示a在字符串中的位置
+str.LastIndexOf("a");//表示最后一个a在字符串中的位置
+
+关键点：IndexOf("字符") 表示字符在字符串中的位置 LastIndexOf("字符") 表示最后一个指定字符在字符串中的位置
