@@ -1,0 +1,20 @@
+【实例】创建泛型方法，实现对两个数的求和运算。
+
+根据题目要求，代码如下。
+class Program
+{
+    static void Main(string[] args)
+    {
+        //将T设置为double类型
+        Add<double>(3.3, 4);
+        //将T设置为int类型
+        Add<int>(3, 4);
+    }
+    //加法运算
+    private static void Add<T>(T a, T b)
+    {
+        double sum = double.Parse(a.ToString()) + double.Parse(b.ToString());
+        Console.WriteLine(sum);
+    }
+}
+
